@@ -11,3 +11,7 @@
 ## Tearing Card
 
 ![](tearingCard/preview.gif)
+
+## Flipping Card
+
+![](flippingCard/preview.git)
