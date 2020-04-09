@@ -60,11 +60,11 @@ body {
   left: -101%;
   width: 100%;
   height: var(--border-width);
-  background-color: var(--border-color);
+  background: linear-gradient(90deg, transparent, var(--border-color));
 }
 
 .container:hover .border.top {
-  animation: border-top 1.5s infinite linear;
+  animation: border-top 1s infinite linear;
 }
 
 .container .border.right {
@@ -72,12 +72,12 @@ body {
   top: -101%;
   width: var(--border-width);
   height: 100%;
-  background-color: var(--border-color);
+  background: linear-gradient(180deg, transparent, var(--border-color));
 }
 
 .container:hover .border.right {
-  animation: border-right 1.5s infinite ease-in-out;
-  animation-delay: 375ms;
+  animation: border-right 1s infinite ease-in-out;
+  animation-delay: 250ms;
 }
 
 .container .border.bottom {
@@ -85,24 +85,24 @@ body {
   right: -101%;
   width: 100%;
   height: var(--border-width);
-  background-color: var(--border-color);
+  background: linear-gradient(90deg, var(--border-color), transparent);
 }
 
 .container:hover .border.bottom {
-  animation: border-bottom 1.5s infinite linear;
-  animation-delay: 750ms;
+  animation: border-bottom 1s infinite linear;
+  animation-delay: 500ms;
 }
 
 .container .border.left {
   bottom: -101%;
   width: var(--border-width);
   height: 100%;
-  background-color: var(--border-color);
+  background: linear-gradient(var(--border-color), transparent);
 }
 
 .container:hover .border.left {
-  animation: border-left 1.5s infinite ease-in-out;
-  animation-delay: 1125ms;
+  animation: border-left 1s infinite ease-in-out;
+  animation-delay: 750ms;
 }
 
 @keyframes border-top {
