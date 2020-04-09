@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border: none;
+  background-color: #1976d2;
+  color: #fff;
+
+  cursor: pointer;
+  transition: all 200ms;
+
+  --border-color: #0f0;
+  --border-width: 4px;
+}
+
+.container:focus {
+  border: 1px solid #1565c0;
+}
+
+.container:hover {
+  background-color: #1565c0;
+  border: 0;
+}
+
+.container:active {
+  transform: scale(0.9);
+  box-shadow: none;
+}
+
+.container .content {
+  font-size: 18px;
+  padding: 20px 60px;
+}
+
+.container .border {
+  position: absolute;
+}
+
+.container .border.top {
+  left: -101%;
+  width: 100%;
+  height: var(--border-width);
+  background-color: var(--border-color);
+}
+
+.container:hover .border.top {
+  animation: border-top 1.5s infinite linear;
+}
+
+.container .border.right {
+  right: 0;
+  top: -101%;
+  width: var(--border-width);
+  height: 100%;
+  background-color: var(--border-color);
+}
+
+.container:hover .border.right {
+  animation: border-right 1.5s infinite ease-in-out;
+  animation-delay: 375ms;
+}
+
+.container .border.bottom {
+  bottom: 0;
+  right: -101%;
+  width: 100%;
+  height: var(--border-width);
+  background-color: var(--border-color);
+}
+
+.container:hover .border.bottom {
+  animation: border-bottom 1.5s infinite linear;
+  animation-delay: 750ms;
+}
+
+.container .border.left {
+  bottom: -101%;
+  width: var(--border-width);
+  height: 100%;
+  background-color: var(--border-color);
+}
+
+.container:hover .border.left {
+  animation: border-left 1.5s infinite ease-in-out;
+  animation-delay: 1125ms;
+}
+
+@keyframes border-top {
+  from {
+    left: -101%;
+  }
+  40%,
+  100% {
+    left: 101%;
+  }
+}
+
+@keyframes border-right {
+  from {
+    top: -101%;
+  }
+  40%,
+  100% {
+    top: 101%;
+  }
+}
+
+@keyframes border-bottom {
+  from {
+    right: -101%;
+  }
+  40%,
+  100% {
+    right: 101%;
+  }
+}
+
+@keyframes border-left {
+  from {
+    bottom: -101%;
+  }
+  40%,
+  100% {
+    bottom: 101%;
+  }
+}
