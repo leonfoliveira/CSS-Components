@@ -14,4 +14,4 @@
 
 ## Flipping Card
 
-![](flippingCard/preview.git)
+![](flippingCard/preview.gif)
